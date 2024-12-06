@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import styles from "./ChangeModal.module.scss";
+import styles from "./EditModal.module.scss";
 
-export const ChangeModal = ({ toggleModal, currentProduct }) => {
+export const EditModal = ({ toggleModal, currentProduct }) => {
   const [formData, setFormData] = useState({
     title: "",
     price: "",
@@ -58,6 +58,7 @@ export const ChangeModal = ({ toggleModal, currentProduct }) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
+        <h3>Добавить изменения:</h3>
         <button className={styles.closeButton} onClick={toggleModal}>
           &times;
         </button>

@@ -102,7 +102,7 @@ export const ProductModule = () => {
               }}
               onClick={resetAllFilters}
             >
-              По умолчанию
+              Сбросить
             </button>
             <button
               style={{

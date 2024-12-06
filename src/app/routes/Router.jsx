@@ -6,6 +6,7 @@ import { ProductPage } from "../../pages/ProductPage/ProductPage";
 import { path } from "../../utils/constants/constants";
 import { Admin } from "../../pages/Admin/Admin";
 import { UserOrder } from "../../pages/Admin/UserOrder";
+import { About } from "../../pages/About/About";
 
 export const Router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const Router = createBrowserRouter([
       {
         path: path.userOrder,
         element: <UserOrder />,
+      },
+      {
+        path: path.about,
+        element: <About />,
       },
     ],
   },

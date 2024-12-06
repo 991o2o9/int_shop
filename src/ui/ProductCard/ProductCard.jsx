@@ -1,10 +1,10 @@
 import axios from "axios";
 import styles from "./ProductCard.module.scss";
-import { MdDelete } from "react-icons/md";
-import { CiEdit } from "react-icons/ci";
+import { MdDeleteSweep } from "react-icons/md";
 import { useState } from "react";
-import { ChangeModal } from "../../modules/AdminModule/ChangeModal/ChangeModal";
 import { useBalance } from "../../modules/OrderModule/context/BalanceProvider/BalanceProvider";
+import { AiFillEdit } from "react-icons/ai";
+import { EditModal } from "../../modules/AdminModule/EditModal/EditModal";
 
 export const ProductCard = ({ item, isAdmin = false }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,8 +37,8 @@ export const ProductCard = ({ item, isAdmin = false }) => {
           <div className={styles.rulePlace}>
             {isAdmin && (
               <>
-                <CiEdit className={styles.icon} onClick={toggleModal} />
-                <MdDelete
+                <AiFillEdit className={styles.icon} onClick={toggleModal} />
+                <MdDeleteSweep
                   className={styles.icon}
                   onClick={() => deleteItem(item._id)}
                 />
@@ -53,7 +53,7 @@ export const ProductCard = ({ item, isAdmin = false }) => {
         </div>
       </div>
       {isModalOpen && (
-        <ChangeModal currentProduct={item} toggleModal={toggleModal} />
+        <EditModal currentProduct={item} toggleModal={toggleModal} />
       )}
     </div>
   );

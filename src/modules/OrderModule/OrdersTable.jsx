@@ -110,7 +110,7 @@ const OrdersTable = () => {
             <p>Введите номер телефона :</p>
             <input
               type="text"
-              placeholder="Введите номер телефона"
+              placeholder="Введите номер телефона *"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className={styles.phoneInput}
