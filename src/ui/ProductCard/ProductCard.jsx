@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ChangeModal } from "../../modules/AdminModule/ChangeModal/ChangeModal";
 import { useBalance } from "../../modules/OrderModule/context/BalanceProvider/BalanceProvider";
 
-export const ProductCard = ({ item }) => {
+export const ProductCard = ({ item, isAdmin = false }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { addToCart } = useBalance();
 
@@ -35,12 +35,20 @@ export const ProductCard = ({ item }) => {
         <div className={styles.priceArea}>
           <p>{item.price} сом</p>
           <div className={styles.rulePlace}>
-            <CiEdit className={styles.icon} onClick={toggleModal} />
-            <MdDelete
-              className={styles.icon}
-              onClick={() => deleteItem(item._id)}
-            />
-            <button onClick={() => addToCart(item)}>Купить</button>
+            {isAdmin && (
+              <>
+                <CiEdit className={styles.icon} onClick={toggleModal} />
+                <MdDelete
+                  className={styles.icon}
+                  onClick={() => deleteItem(item._id)}
+                />
+              </>
+            )}
+            {!isAdmin && (
+              <button className={styles.buyBtn} onClick={() => addToCart(item)}>
+                Купить
+              </button>
+            )}
           </div>
         </div>
       </div>

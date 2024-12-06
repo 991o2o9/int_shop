@@ -1,6 +1,6 @@
 export const path = {
   home: "/",
-  order: "/order",
+  order: "/order-page",
   productPage: "/product-list",
   admin: "/admin",
   userOrder: "/admin/users-order",
@@ -8,6 +8,6 @@ export const path = {
 
 export const navigation = [
   { label: "Главная", path: path.home },
-  { label: "Товары", path: path.productPage },
-  { label: "Заказы", path: path.order },
+  { label: "Продукты", path: path.productPage },
+  { label: "Ваши заказы", path: path.order },
 ];

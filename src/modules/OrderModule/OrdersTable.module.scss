@@ -12,14 +12,14 @@
   }
   .numAre {
     display: flex;
-    flex-direction: column;
     gap: 3px;
     p {
       color: red;
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 600;
       margin: 0;
       padding: 0;
+      width: 420px;
     }
     .phoneInput {
       margin-top: 0px;
@@ -82,6 +82,7 @@
 
 .totalContainer {
   text-align: right;
+
   .addFundsButton {
     background-color: #000;
     color: #fff;

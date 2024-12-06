@@ -107,7 +107,7 @@ const OrdersTable = () => {
         <div className={styles.ordersTable}>
           <h2 className={styles.title}>Создание заказа:</h2>
           <div className={styles.numAre}>
-            <p>Введите номер телефона *</p>
+            <p>Введите номер телефона :</p>
             <input
               type="text"
               placeholder="Введите номер телефона"
@@ -119,10 +119,10 @@ const OrdersTable = () => {
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>Название товара</th>
-                <th>Количество</th>
-                <th>Цена</th>
-                <th>Действия</th>
+                <th>Наименование товара</th>
+                <th>Кол-во</th>
+                <th>Стоимость</th>
+                <th>Опции</th>
               </tr>
             </thead>
             <tbody>
