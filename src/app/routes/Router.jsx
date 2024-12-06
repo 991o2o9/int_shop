@@ -5,6 +5,7 @@ import { OrderPage } from "../../pages/OrderPage/OrderPage";
 import { ProductPage } from "../../pages/ProductPage/ProductPage";
 import { path } from "../../utils/constants/constants";
 import { Admin } from "../../pages/Admin/Admin";
+import { UserOrder } from "../../pages/Admin/UserOrder";
 
 export const Router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const Router = createBrowserRouter([
       {
         path: path.admin,
         element: <Admin />,
+      },
+      {
+        path: path.userOrder,
+        element: <UserOrder />,
       },
     ],
   },

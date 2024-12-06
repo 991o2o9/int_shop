@@ -1,9 +1,12 @@
 import { useState } from "react";
-import styles from "./CreateProd.module.scss";
-import { OrderList } from "../OrderList/OrderList";
+import styles from "./CreateBlock.module.scss";
 import axios from "axios";
+import { Container } from "../../../ui/Container/Container";
+import { Link } from "react-router-dom";
+import { path } from "../../../utils/constants/constants";
+import { HiCursorClick } from "react-icons/hi";
 
-export const CreateProd = () => {
+export const CreateBlock = () => {
   const [formData, setFormData] = useState({
     title: "",
     price: null,
@@ -43,7 +46,15 @@ export const CreateProd = () => {
   };
 
   return (
-    <div className={styles.adminP}>
+    <Container>
+      <div className={styles.navigation}>
+        <Link to={path.home} className={styles.orderList}>
+          <span>Вернуться домой</span> <HiCursorClick />
+        </Link>
+        <Link to={path.userOrder} className={styles.orderList}>
+          <span>Перейти к заказам пользователей</span> <HiCursorClick />
+        </Link>
+      </div>
       <div className={styles.create}>
         <h3>Создать товар</h3>
         <div className={styles.inpArea}>
@@ -83,9 +94,8 @@ export const CreateProd = () => {
         </div>
         <button onClick={handleSave}>Создать</button>
       </div>
-      <OrderList />
-    </div>
+    </Container>
   );
 };
 
-export default CreateProd;
+export default CreateBlock;

@@ -8,7 +8,7 @@
   top: 0;
   z-index: 1000;
   padding: 20px 0;
-  background-color: #14142b;
+  background-color: #f8f9fa;
   box-shadow: 0px 2px 43.5px 0px #0000001a;
 
   .navbar {
@@ -25,11 +25,11 @@
       a {
         display: flex;
         align-items: center;
-        color: #f7f7fc;
+        color: #000000;
       }
       .active {
         transform: scale(1.04);
-        border-bottom: 2px solid #f7f7fc;
+        border-bottom: 2px solid #000000;
       }
       .notificationBadge {
         display: inline-block;
@@ -42,6 +42,7 @@
     }
   }
   .balance {
+    margin-left: auto;
     display: flex;
     width: fit-content;
 

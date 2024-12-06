@@ -22,7 +22,7 @@ export const ProductBlock = () => {
   return (
     <Container>
       <div className={styles.productBlockItself}>
-        <h3>Новый ассортимент товара</h3>
+        <h3>Aссортимент товара</h3>
         <div className={styles.productList}>
           {product.slice(0, 8).map((item, index) => (
             <ProductCard key={index} item={item} />

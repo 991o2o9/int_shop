@@ -1,16 +1,32 @@
+.navigation {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  .orderList {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    background-color: #000;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #eff0f6;
+  }
+}
+
 .orders {
   background-color: #fcfcfc;
   border: 1px solid #eff0f6;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 8px;
   h3 {
     font-size: 24px;
     font-weight: 700;
-    color: #4e4b66;
+    color: #000;
   }
   .list {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     padding: 10px 0px;
   }

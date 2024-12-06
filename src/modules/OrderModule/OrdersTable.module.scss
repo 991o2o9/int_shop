@@ -6,7 +6,7 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   .title {
-    color: #4e4b66;
+    color: #000;
     font-weight: 700;
     margin: 10px 0px;
   }
@@ -59,21 +59,23 @@
 }
 
 .decreaseButton {
-  background-color: #f44336;
-  color: white;
+  background-color: #9e9e9e;
+  color: rgb(0, 0, 0);
 }
 
 .increaseButton {
-  background-color: #4caf50;
+  background-color: #000;
   color: white;
 }
 
 .payButton {
+  background-color: #000;
+  color: #fff;
   padding: 10px 20px;
-  background-color: #5f2eea;
-  color: white;
+  border: none;
+  border-radius: 4px;
   font-size: 16px;
-  border-radius: 20px;
+  cursor: pointer;
   display: block;
   margin-top: 10px;
 }
@@ -81,9 +83,12 @@
 .totalContainer {
   text-align: right;
   .addFundsButton {
-    background-color: #5f2eea;
+    background-color: #000;
+    color: #fff;
     padding: 10px 20px;
-    border-radius: 20px;
-    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
   }
 }

@@ -2,7 +2,17 @@ import styles from "./OrderCard.module.scss";
 export const OrderCard = ({ item }) => {
   return (
     <div className={styles.card}>
-      <img src={item.orders[0].img} className={styles.cardImage} />
+      <div className={styles.mainInfo}>
+        <img src={item.orders[0].img} className={styles.cardImage} />
+        <div className={styles.info}>
+          <p className={styles.cardPhone}>
+            <strong>Телефон:</strong> {item.phone}
+          </p>
+          <p className={styles.cardPhone}>
+            <strong>Общая цена:</strong> {item.totalPrice} сом
+          </p>
+        </div>
+      </div>
       <div className={styles.cardContent}>
         <div className={styles.cardDetails}>
           {item.orders.map((item, index) => (
@@ -22,12 +32,6 @@ export const OrderCard = ({ item }) => {
             </div>
           ))}
         </div>
-        <p className={styles.cardPhone}>
-          <strong>Телефон:</strong> {item.phone}
-        </p>
-        <p className={styles.cardPhone}>
-          <strong>Общая цена:</strong> {item.totalPrice} сом
-        </p>
       </div>
     </div>
   );

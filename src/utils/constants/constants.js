@@ -3,6 +3,7 @@ export const path = {
   order: "/order",
   productPage: "/product-list",
   admin: "/admin",
+  userOrder: "/admin/users-order",
 };
 
 export const navigation = [

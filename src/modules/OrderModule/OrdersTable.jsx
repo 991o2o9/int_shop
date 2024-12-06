@@ -43,14 +43,16 @@ const OrdersTable = () => {
 
   const handleCheckout = async () => {
     if (!phone.trim()) {
-      alert("Пожалуйста, укажите номер телефона.");
+      alert("Пожалуйста, введите ваш номер телефона для оформления заказа.");
       return;
     }
 
     const totalPrice = calculateTotal();
     if (balance < totalPrice) {
       alert(
-        `Недостаточно средств! Пополните баланс на ${totalPrice - balance} сом.`
+        `На вашем балансе недостаточно средств. Пополните баланс на ${
+          totalPrice - balance
+        } сом, чтобы продолжить покупку.`
       );
       return;
     }
@@ -69,16 +71,16 @@ const OrdersTable = () => {
       );
 
       if (response.status === 200 || response.status === 201) {
-        alert("Покупка успешно совершена!");
+        alert("Ваш заказ успешно оформлен! Благодарим за покупку.");
         setBalance(balance - totalPrice);
         setOrders([]);
       } else {
         console.error("Неожиданный ответ сервера:", response.status);
-        alert("Произошла ошибка при оплате. Попробуйте снова.");
+        alert("Произошла ошибка при обработке заказа. Попробуйте ещё раз.");
       }
     } catch (error) {
       console.error("Ошибка при отправке данных на сервер:", error);
-      alert("Ошибка подключения к серверу. Проверьте настройки.");
+      alert("Не удалось связаться с сервером. Проверьте соединение.");
     }
   };
 
@@ -128,7 +130,7 @@ const OrdersTable = () => {
                 <tr key={order.id}>
                   <td>{order.title}</td>
                   <td>{order.quantity}</td>
-                  <td>{order.price * order.quantity} ₽</td>
+                  <td>{order.price * order.quantity} сом</td>
                   <td>
                     <button
                       className={styles.decreaseButton}

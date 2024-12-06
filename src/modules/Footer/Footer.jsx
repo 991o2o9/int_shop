@@ -2,9 +2,9 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Container } from "../../ui/Container/Container";
 import styles from "./Footer.module.scss";
 import { navigation, path } from "../../utils/constants/constants";
-import { LogoDark } from "../../assets/icons/LogoDark";
 import { scrollToTop } from "../../utils/helpers/helpers";
-import { FaInstagram, FaTelegram, FaWhatsapp } from "react-icons/fa";
+import { MdWatchLater } from "react-icons/md";
+import { Logo } from "../../assets/icons/Logo";
 export const Footer = () => {
   const location = useLocation();
 
@@ -20,11 +20,11 @@ export const Footer = () => {
         <div className={styles.footer}>
           <div className={styles.logoPart}>
             <Link to={path.home}>
-              <LogoDark className={styles.logo} />
+              <Logo color={"#fff"} />
             </Link>
             <div className={styles.info}>
-              <span className={styles.first}>Ежедневно</span>
-              <span className={styles.second}>10:00 - 22:00</span>
+              <MdWatchLater className={styles.icon} />
+              <span className={styles.first}>Круглосуточно</span>
             </div>
           </div>
           <nav>
@@ -45,20 +45,9 @@ export const Footer = () => {
           <div className={styles.contact}>
             <div className={styles.number}>
               <a href="tel:996555555555">
-                <span className={styles.num}>+996 555 555 555</span>
+                <span className={styles.num}>+996999999999</span>
               </a>
               <span className={styles.text}>Обратный звонок</span>
-            </div>
-            <div className={styles.social}>
-              <a href="" target="_blank">
-                <FaWhatsapp />
-              </a>
-              <a href="" target="_blank">
-                <FaTelegram />
-              </a>
-              <a href="" target="_blank">
-                <FaInstagram />
-              </a>
             </div>
           </div>
         </div>

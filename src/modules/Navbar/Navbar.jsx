@@ -1,11 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
-import styles from "./Header.module.scss";
+import styles from "./Navbar.module.scss";
 import { navigation, path } from "../../utils/constants/constants";
 import { Logo } from "../../assets/icons/Logo";
 import { scrollToTop } from "../../utils/helpers/helpers";
 import { useBalance } from "../OrderModule/context/BalanceProvider/BalanceProvider";
 
-export const Header = () => {
+export const Navbar = () => {
   const { balance, orders } = useBalance();
   const location = useLocation();
 
@@ -20,7 +20,7 @@ export const Header = () => {
       <div className={styles.navbar}>
         <nav className={styles.nav}>
           <Link to={path.home}>
-            <Logo />
+            <Logo color={"#000"} />
           </Link>
           {navigation.map((item, index) => (
             <Link
@@ -35,13 +35,10 @@ export const Header = () => {
               )}
             </Link>
           ))}
-          <Link style={{ color: "#f7f7fc" }} to={path.admin}>
-            Админ
-          </Link>
-          <div className={styles.balance}>
-            <span>Текущий баланс: {balance} сом</span>
-          </div>
         </nav>
+        <div className={styles.balance}>
+          <span>Текущий баланс: {balance} сом</span>
+        </div>
       </div>
     </header>
   );

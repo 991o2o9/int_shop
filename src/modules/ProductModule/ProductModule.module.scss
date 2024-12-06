@@ -29,13 +29,13 @@
   width: 300px;
   height: fit-content;
   background: #fcfcfc;
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 10px 15px;
   border: 1px solid rgb(163, 163, 163);
   .title {
     font-size: 20px;
     font-weight: 700;
-    color: #4e4b66;
+    color: #000;
   }
   .btnArea {
     display: flex;
@@ -43,12 +43,13 @@
     align-items: flex-start;
     gap: 5px;
     button {
-      width: 150px;
-      height: 40px;
-      color: #fcfcfc;
-      background: #5f2eea;
-      border-radius: 20px;
-      text-align: start;
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
       padding-left: 15px;
       transition: 0.4s ease-in-out;
       &:hover {

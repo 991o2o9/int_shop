@@ -6,12 +6,13 @@
   h3 {
     font-size: 24px;
     font-weight: 700;
-    color: #4e4b66;
+    color: #000;
   }
   .productList {
     width: fit-content;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px auto;
+    gap: 20px;
   }
 }

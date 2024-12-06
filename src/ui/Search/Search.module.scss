@@ -4,7 +4,7 @@
   width: 100%;
   background-color: #ffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 24px;
+  border-radius: 8px;
   border: 1px solid #919191;
   margin-bottom: 40px;
   padding: 8px 8px 8px 24px;
@@ -34,18 +34,18 @@
     width: 24px;
     height: 20px;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 8px;
     display: flex;
     align-items: center;
-    background: #5f2eea;
-    color: #fcfcfc;
+    background-color: #000;
+    color: #fff;
   }
 
   .btn {
-    border-radius: 18px;
-    background: #5f2eea;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
     font-size: 16px;
-    color: #fcfcfc;
     padding: 0px 30px;
     height: 100%;
   }

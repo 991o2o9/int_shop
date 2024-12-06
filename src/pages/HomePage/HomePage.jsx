@@ -3,7 +3,7 @@ import { ProductBlock } from "../../modules/HomeModule/ProductBlock/ProductBlock
 
 export const HomePage = () => {
   return (
-    <div className="container">
+    <div>
       <HeroBlock />
       <ProductBlock />
     </div>

@@ -1,6 +1,7 @@
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: fit-content;
   gap: 15px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -8,11 +9,20 @@
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
 
   &:hover {
-    transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  .mainInfo {
+    display: flex;
+    gap: 20px;
+    border-radius: 8px;
+    padding: 10px;
+    border: solid 1px #ddd;
+    .info {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -29,8 +39,17 @@
   flex-direction: column;
   justify-content: space-between;
   .cardDetails {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    .cardInside {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      height: auto;
+      width: auto;
+    }
   }
 }
 
