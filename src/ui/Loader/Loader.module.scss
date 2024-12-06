@@ -1,0 +1,22 @@
+.loaderForWebSite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.loading {
+  width: 70px;
+  height: 70px;
+  border: 10px solid #5f2eea;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: loading-act 1s linear infinite;
+}
+@keyframes loading-act {
+  from {
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

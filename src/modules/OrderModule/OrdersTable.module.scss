@@ -1,0 +1,89 @@
+.ordersTable {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  .title {
+    color: #4e4b66;
+    font-weight: 700;
+    margin: 10px 0px;
+  }
+  .numAre {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    p {
+      color: red;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+    }
+    .phoneInput {
+      margin-top: 0px;
+      outline: none;
+      background: rgb(237, 237, 237);
+      &::placeholder {
+        color: black;
+      }
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f4f4f4;
+}
+
+.decreaseButton,
+.increaseButton,
+.payButton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.decreaseButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.increaseButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.payButton {
+  padding: 10px 20px;
+  background-color: #5f2eea;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  display: block;
+  margin-top: 10px;
+}
+
+.totalContainer {
+  text-align: right;
+  .addFundsButton {
+    background-color: #5f2eea;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+  }
+}

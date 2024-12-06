@@ -1,0 +1,78 @@
+.searchSortArea {
+  display: flex;
+  gap: 40px;
+  margin: 0px 50px;
+  .product {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .noResults {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #888;
+      padding: 20px;
+    }
+
+    .productList {
+      width: fit-content;
+      margin: 0px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+  }
+}
+.sorter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  height: fit-content;
+  background: #fcfcfc;
+  border-radius: 20px;
+  padding: 10px 15px;
+  border: 1px solid rgb(163, 163, 163);
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #4e4b66;
+  }
+  .btnArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    button {
+      width: 150px;
+      height: 40px;
+      color: #fcfcfc;
+      background: #5f2eea;
+      border-radius: 20px;
+      text-align: start;
+      padding-left: 15px;
+      transition: 0.4s ease-in-out;
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+  }
+  .byPrice {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .inpArea {
+      display: flex;
+      gap: 20px;
+      input {
+        width: 100px;
+        height: 45px;
+        padding: 0px 10px;
+        outline: none;
+        border: 1px solid rgb(163, 163, 163);
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// sdsad

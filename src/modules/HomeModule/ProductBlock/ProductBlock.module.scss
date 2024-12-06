@@ -1,0 +1,17 @@
+.productBlockItself {
+  margin: 80px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4e4b66;
+  }
+  .productList {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+}

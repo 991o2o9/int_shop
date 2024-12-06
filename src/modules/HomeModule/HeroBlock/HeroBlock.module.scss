@@ -1,0 +1,70 @@
+.hero {
+  position: relative;
+  margin: 0px 0px 112px 0px;
+  background-color: #5f2eea;
+  z-index: 1;
+  border-radius: 30px;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 60px;
+    left: 520px;
+    width: 100%;
+    transform: rotate(10deg);
+    height: 100%;
+    z-index: -1;
+    background: url(/src/assets/images/aphoto-transformed.png) no-repeat center;
+    background-size: cover;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 67px 580px 68px 47px;
+
+    h1 {
+      font-size: 40px;
+      font-weight: 900;
+      color: #fcfcfc;
+    }
+    span {
+      font-size: 20px;
+      font-weight: 400;
+      color: #fcfcfc;
+    }
+    button {
+      width: 177px;
+      height: 51px;
+      border-radius: 50px;
+      font-size: 20px;
+      background-color: #fcfcfc;
+    }
+  }
+}
+
+.textPart {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 413px;
+    width: 100%;
+    h3 {
+      font-weight: 700;
+      font-size: 20px;
+      color: #4e4b66;
+    }
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      color: #4e4b66;
+    }
+  }
+}
