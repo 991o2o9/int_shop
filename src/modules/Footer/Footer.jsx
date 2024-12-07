@@ -44,10 +44,10 @@ export const Footer = () => {
           </nav>
           <div className={styles.contact}>
             <div className={styles.number}>
-              <a href="tel:996555555555">
-                <span className={styles.num}>+996999999999</span>
+              <a href="tel:996999999999">
+                <span className={styles.num}>+996 (999) 999 999</span>
               </a>
-              <span className={styles.text}>Обратный звонок</span>
+              <span className={styles.text}>Обратная связь</span>
             </div>
           </div>
         </div>

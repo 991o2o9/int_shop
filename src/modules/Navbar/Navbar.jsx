@@ -6,7 +6,7 @@ import { scrollToTop } from "../../utils/helpers/helpers";
 import { useBalance } from "../OrderModule/context/BalanceProvider/BalanceProvider";
 
 export const Navbar = () => {
-  const { balance, orders } = useBalance();
+  const { balance } = useBalance();
   const location = useLocation();
 
   const getActiveLink = (pathName) => {
@@ -30,9 +30,6 @@ export const Navbar = () => {
               onClick={scrollToTop()}
             >
               <span>{item.label}</span>
-              {item.label === "Заказы" && orders?.length > 0 && (
-                <div className={styles.notificationBadge}></div>
-              )}
             </Link>
           ))}
         </nav>
