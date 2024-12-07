@@ -1,9 +1,9 @@
-import CreateBlock from "../../modules/AdminModule/CreateBlock/CreateBlock";
+import Create from "../../modules/AdminModule/Create/Create";
 
 export const Admin = () => {
   return (
     <div className="container">
-      <CreateBlock />
+      <Create />
     </div>
   );
 };

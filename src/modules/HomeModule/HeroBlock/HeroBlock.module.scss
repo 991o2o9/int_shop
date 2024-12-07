@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  margin: 0px 0px 112px 0px;
+  // margin: 0px 0px 112px 0px
   z-index: 1;
   overflow: hidden;
   height: 620px;
@@ -40,31 +40,6 @@
       font-size: 20px;
       background-color: #000;
       color: white;
-    }
-  }
-}
-
-.textPart {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  gap: 20px;
-  .card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 413px;
-    width: 100%;
-
-    h3 {
-      font-weight: 700;
-      font-size: 20px;
-      color: #000;
-    }
-    span {
-      font-weight: 400;
-      font-size: 16px;
-      color: #000;
     }
   }
 }

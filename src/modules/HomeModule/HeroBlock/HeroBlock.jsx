@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { path } from "../../../utils/constants/constants";
-import { Textpart } from "./components/textPart/Textpart";
 import styles from "./HeroBlock.module.scss";
 export const HeroBlock = () => {
   const navigate = useNavigate();
@@ -19,7 +18,6 @@ export const HeroBlock = () => {
           <button onClick={() => navigate(path.productPage)}>Посмотреть</button>
         </div>
       </section>
-      <Textpart />
     </>
   );
 };

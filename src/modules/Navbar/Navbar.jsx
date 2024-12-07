@@ -33,8 +33,8 @@ export const Navbar = () => {
             </Link>
           ))}
         </nav>
-        <div className={styles.balance}>
-          <span>Текущий баланс: {balance} сом</span>
+        <div className={styles.balanceWallet}>
+          <span>Ваш баланс: {balance} сом</span>
         </div>
       </div>
     </header>

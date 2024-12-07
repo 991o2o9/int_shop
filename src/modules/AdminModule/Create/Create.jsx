@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./CreateBlock.module.scss";
+import styles from "./Create.module.scss";
 import axios from "axios";
 import { Container } from "../../../ui/Container/Container";
 import { Link } from "react-router-dom";
@@ -7,7 +7,7 @@ import { path } from "../../../utils/constants/constants";
 import { HiCursorClick } from "react-icons/hi";
 import { ProductCard } from "../../../ui/ProductCard/ProductCard";
 
-export const CreateBlock = () => {
+export const Create = () => {
   const [productList, setProductList] = useState([]);
 
   const [formData, setFormData] = useState({
@@ -122,4 +122,4 @@ export const CreateBlock = () => {
   );
 };
 
-export default CreateBlock;
+export default Create;

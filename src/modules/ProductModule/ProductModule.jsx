@@ -26,60 +26,61 @@ export const ProductModule = () => {
     fetchProducts();
   }, []);
 
-  const applyFilters = (searchQuery, sortOrder, minPrice, maxPrice) => {
-    let filteredProducts = productList;
+  const filterFunctions = [
+    (products) =>
+      query
+        ? products.filter((product) =>
+            product.title.toLowerCase().includes(query.toLowerCase())
+          )
+        : products,
 
-    if (searchQuery) {
-      filteredProducts = filteredProducts.filter((product) =>
-        product.title.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
+    (products) =>
+      priceFilter.min
+        ? products.filter(
+            (product) => product.price >= parseFloat(priceFilter.min)
+          )
+        : products,
 
-    if (minPrice) {
-      filteredProducts = filteredProducts.filter(
-        (product) => product.price >= parseFloat(minPrice)
-      );
-    }
-    if (maxPrice) {
-      filteredProducts = filteredProducts.filter(
-        (product) => product.price <= parseFloat(maxPrice)
-      );
-    }
+    (products) =>
+      priceFilter.max
+        ? products.filter(
+            (product) => product.price <= parseFloat(priceFilter.max)
+          )
+        : products,
+  ];
 
-    switch (sortOrder) {
-      case "ordinary":
-        filteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
-        break;
-      case "desc":
-        filteredProducts = filteredProducts.sort((a, b) => b.price - a.price);
-        break;
-      default:
-        break;
-    }
+  const applyFilters = () => {
+    const filteredProducts = filterFunctions.reduce(
+      (acc, filterFn) => filterFn(acc),
+      productList
+    );
 
-    setDisplayedProducts(filteredProducts);
-    setIsEmpty(filteredProducts.length === 0);
+    const sortedProducts =
+      order === "ordinary"
+        ? [...filteredProducts].sort((a, b) => a.price - b.price)
+        : order === "desc"
+        ? [...filteredProducts].sort((a, b) => b.price - a.price)
+        : filteredProducts;
+
+    setDisplayedProducts(sortedProducts);
+    setIsEmpty(sortedProducts.length === 0);
   };
+
+  useEffect(() => {
+    applyFilters();
+  }, [query, order, priceFilter, productList]);
 
   const handleQueryChange = (searchTerm) => {
     setQuery(searchTerm);
-    applyFilters(searchTerm, order, priceFilter.min, priceFilter.max);
   };
 
   const handleSorting = (sortOrder) => {
     setOrder(sortOrder);
-    applyFilters(query, sortOrder, priceFilter.min, priceFilter.max);
   };
 
   const handlePriceInput = (e) => {
     const { name, value } = e.target;
     setPriceFilter((prev) => ({ ...prev, [name]: value }));
-    applyFilters(
-      query,
-      order,
-      name === "min" ? value : priceFilter.min,
-      name === "max" ? value : priceFilter.max
-    );
   };
 
   const resetAllFilters = () => {
